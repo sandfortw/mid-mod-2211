@@ -1,0 +1,12 @@
+<h1> Food Index </h1>
+
+<h2> Total Hits: <%= @facade.count %> </h2>
+
+<% @facade.foods.each do |food| %>
+<div id='food'>
+  <h2> Food: <%=food.description%></h2>
+  <p> GTIN/UPC Code: <%= food.code %> </p>
+  <p> Brand Owner: <%= food.brand_owner %> </p>
+  <p> Ingredients: <%= food.ingredients%> </p>
+</div>
+<% end %>
